@@ -16,9 +16,9 @@ int main() {
 	int t = ts.tv_nsec;
 	arr_t p [ARRAY_LENGTH];
 	fibber(p);	
-	printarr(p);
 	clock_gettime(CLOCK_REALTIME, &ts);
 	t = ts.tv_nsec - t;
+	printarr(p);
 	printf("\ntime elapsed: %dns\n", t);
 	return 0;
 }
