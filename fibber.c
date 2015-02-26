@@ -7,8 +7,10 @@
 
 typedef mpz_t arr_t;
 
+/* prints all elements in array arr, of length len */
 void printarr(arr_t *arr, int len);
 
+/* calculates the Fibonacci sequence in array arr, to length len */
 void fibber(arr_t *arr, int len);
 
 int main() {
@@ -22,6 +24,7 @@ int main() {
 	scanf("%d", &size);
 	
 	if (!size) {
+		/* default size of array */
 		size = ARRAY_LENGTH;
 	}
 	p = (arr_t *) malloc(sizeof(arr_t) * (size_t) size);
@@ -47,7 +50,7 @@ void printarr(arr_t *arr, int len) {
 
 void fibber(arr_t *arr, int len) {
 	arr_t *r = arr;
-	int i;	
+	int i;
 	for (i = 0; i < len; ++i, ++r) {
 		mpz_init(*r);
 		if (i > 1)
